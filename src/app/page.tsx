@@ -55,7 +55,7 @@ export default function Home() {
   }, [currentProps]);
 
   return (
-    <main className="flex min-h-screen">
+    <main className="flex h-screen">
       <div
         className="w-[300px] flex-shrink-0 border-r h-full overflow-y-auto p-6 gap-6 flex flex-col"
       >
