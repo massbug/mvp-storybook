@@ -55,12 +55,12 @@ export default function Home() {
   }, [currentProps]);
 
   return (
-    <main className="flex h-screen">
+    <main className="flex flex-col md:flex-row h-screen">
       <div
-        className="w-[300px] flex-shrink-0 border-r h-full overflow-y-auto p-6 gap-6 flex flex-col"
+        className="w-full md:w-[300px] shrink-0 border-b md:border-b-0 md:border-r overflow-y-auto p-4 md:p-6 gap-4 md:gap-6 flex flex-col"
       >
         <div className="flex items-center justify-between">
-          <h2 className="text-xl font-bold">
+          <h2 className="text-lg md:text-xl font-bold">
             Controls Panel
           </h2>
           <ThemeSwitcher
@@ -70,7 +70,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-4 md:space-y-6">
           <div className="space-y-2">
             <Label htmlFor="variant-select">Variant</Label>
             <Select
@@ -139,7 +139,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex-1">
+      <div className="flex-1 min-h-0">
         <iframe
           ref={iframeRef}
           src="/preview"
